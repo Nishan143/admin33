@@ -13,7 +13,7 @@
                                             <i class="fab fa-gg-circle"></i>Product-uplode
                                         </div>  
                                         <div class="col-md-4 card_button_part">
-                                            <a href="all-product.html" class="btn btn-sm btn-dark"><i class="fas fa-th"></i>All Product</a>
+                                            <a href="all-product.php" class="btn btn-sm btn-dark"><i class="fas fa-th"></i>All Product</a>
                                         </div>  
                                     </div>
                                   </div>

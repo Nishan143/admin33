@@ -12,7 +12,7 @@
                                         <i class="fab fa-gg-circle"></i>All Product Information
                                     </div>  
                                     <div class="col-md-4 card_button_part">
-                                        <a href="product.html" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i>Add Product</a>
+                                        <a href="product.php" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i>Add Product</a>
                                     </div>  
                                 </div>
                               </div>
