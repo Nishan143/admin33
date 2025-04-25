@@ -5,7 +5,7 @@
             <div class="col-md-2 sidebar_part">
                 <div class="user_part">
                     <img class="" src="images/avatar.png" alt="avatar"/>
-                    <h5>Aktaruzzaman</h5>
+                    <h5><?= $_SESSION['name']; ?> <!-- usser name --></h5>
                     <p><i class="fas fa-circle"></i> Online</p>
                 </div>
                 <div class="menu">
@@ -15,7 +15,7 @@
                         <li><a href="product.php"><i class="fas fa-globe"></i>Product</a></li>
                         <li><a href="#"><i class="fas fa-images"></i>Blogs</a></li>
                         <li><a href="#"><i class="fas fa-comments"></i> Contact Message</a></li>
-                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,7 +5,7 @@
 ?>
                     <div class="row">
                         <div class="col-md-12 welcome_part">
-                            <p><span>Welcome Mr.</span> <?= $_SESSION['name']; ?></p>
+                            <p><span>Welcome Mr.</span> <?= $_SESSION['name']; ?> <!-- usser name --></p>
                         </div>
                     </div>
 <?php

@@ -22,30 +22,34 @@
                             <div class="col-md-7 pe-0">
                                 <div class="form-left h-100 py-5 px-5">
                                     <?php
-                                      if(!empty($_POST)){
-                                        $username=$_POST['username'];
+                                      if(isset($_POST['phone'])){
+
+                                        $phone=$_POST['phone'];
                                         $password=md5($_POST['password']);
 
-                                        $sel="SELECT * FROM kusers WHERE user_username='$username'";
+                                        $sel = "SELECT * FROM farmer WHERE phone='$phone'";
                                         $Q=mysqli_query($con,$sel);
                                         $data=mysqli_fetch_assoc($Q);
-                                        if($data['user_password']===$password){
-                                          $_SESSION['id']=$data['user_id'];
-                                          $_SESSION['name']=$data['user_name'];
-                                          $_SESSION['username']=$data['user_username'];
-                                          $_SESSION['role']=$data['role_id'];
+                                        if($data['password'] == $password){
+
+                                          $_SESSION['name'] = $data['farmer_name'];
+                                          $_SESSION['phone'] = $data['phone'];
+                                          //$_SESSION['role']=$data['role_id'];
                                           header('Location:index.php');
                                         }else{
-                                          echo "Username or Password didn't match.";
+                                            echo '<script>
+                                                    window.location.href = "login.php"
+                                                    alert("You have entered wrong Phone number or Password.")           
+                                                </script>';
                                         }
                                       }
                                     ?>
                                     <form action="" method="post" class="row g-4">
                                         <div class="col-12">
-                                            <label>Username<span class="text-danger">*</span></label>
+                                            <label>Phone<span class="text-danger">*</span></label>
                                             <div class="input-group">
                                                 <div class="input-group-text"><i class="fas fa-user"></i></div>
-                                                <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                                                <input type="text" class="form-control" name="phone" placeholder="Enter phone">
                                             </div>
                                         </div>
 
@@ -77,7 +81,7 @@
                             <div class="col-md-5 ps-0 d-none d-md-block">
                                 <div class="form-right h-100 bg-primary text-white text-center pt-5">
                                     <i class="fas fa-user-shield"></i>
-                                    <h2 class="fs-1">Welcome Back!!!</h2>
+                                    <h2 class="fs-1">Welcome Back!</h2>
                                 </div>
                             </div>
                         </div>

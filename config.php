@@ -1,5 +1,5 @@
 <?php
-  $db_name='krishi';
+  $db_name='smart_krishi';
   $db_user='root';
   $db_pass='';
   $db_host='localhost';
